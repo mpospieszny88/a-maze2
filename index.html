@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-Maze Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>A-Maze Game</h1>
+        <div class="game-container">
+            <canvas id="mazeCanvas"></canvas>
+        </div>
+        <div id="message" class="message"></div>
+        
+        <!-- Mobile controls -->
+        <div class="mobile-controls">
+            <div class="mobile-controls-grid">
+                <button id="btnUp" class="mobile-btn btn-up">↑</button>
+                <button id="btnLeft" class="mobile-btn btn-left">←</button>
+                <button id="btnRight" class="mobile-btn btn-right">→</button>
+                <button id="btnDown" class="mobile-btn btn-down">↓</button>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <div class="slider-container">
+                <label for="gridSizeSlider">Grid Size: <span id="gridSizeValue">20</span>x<span id="gridSizeValue2">20</span></label>
+                <input type="range" id="gridSizeSlider" min="10" max="50" value="20" class="slider">
+            </div>
+            <button id="restartButton" class="restart-btn">Start Again!</button>
+        </div>
+    </div>
+    <script src="maze.js"></script>
+</body>
+</html> 

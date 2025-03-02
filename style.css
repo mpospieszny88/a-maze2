@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+.game-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+canvas {
+    border: 2px solid #333;
+    background-color: #fff;
+    max-width: 100%;
+    height: auto;
+}
+
+.message {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    margin-top: 20px;
+    min-height: 30px;
+    color: #333;
+    font-weight: bold;
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.slider-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.slider-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-size: clamp(0.9rem, 3vw, 1rem);
+}
+
+.slider {
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #ddd;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.restart-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.restart-btn:hover {
+    background-color: #45a049;
+}
+
+/* Mobile Controls */
+.mobile-controls {
+    display: none;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 240px;
+    align-self: center;
+    justify-content: center;
+}
+
+.mobile-controls-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.mobile-btn {
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-btn:active {
+    background-color: #45a049;
+    transform: scale(0.95);
+}
+
+.btn-up {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.btn-left {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.btn-right {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.btn-down {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .mobile-controls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+    
+    .controls {
+        gap: 10px;
+    }
+    
+    .restart-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+} 
