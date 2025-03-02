@@ -434,7 +434,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     // Add event listener for media query changes to check when mobile controls become visible
-    const mediaQuery = window.matchMedia('(max-width: 768px)');
+    const mediaQuery = window.matchMedia('(max-width: 1024px)');
     mediaQuery.addEventListener('change', (e) => {
         if (e.matches) {
             // Mobile controls will be visible, center them

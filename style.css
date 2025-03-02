@@ -172,6 +172,15 @@ canvas {
 }
 
 /* Responsive design */
+@media screen and (max-width: 1024px) {
+    /* Show mobile controls on tablets/iPads */
+    .mobile-controls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .container {
         padding: 15px;
